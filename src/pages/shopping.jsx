@@ -1,32 +1,19 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { MyContext } from '../context/Mycontext'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Card} from './Card'
+
 
 const shopping = () => {
   const [Users, setUsers] = useContext(MyContext)
-
-
-  const increaseHandler = () =>{
-    console.log(Users);
-  }
+  const [numbers, setnumbers] = useState(0)
   return (
     <>
   <div className='container'>
     <div className='row'>
     {
       Users.map(item=>{
-        return( <> 
-          <div className='col-sm-2 mx-2 my-5'  key={item.id}>
-            <img src={item.image} key={item.id} alt="" className='w-100' />
-            <a className='btn btn-primary' onClick={increaseHandler}>+</a>
-            <label>{item.num}</label>
-            <a className='btn btn-primary'>-</a>
-            </div>
-
-         
-        
-        
-        </>) 
+        return <Card item={item} key={item.id}/>
       })
     }
    </div> </div></>

@@ -11,8 +11,8 @@ function Nacbre() {
   <Navbar.Brand >mhmdrezachizari</Navbar.Brand>
   <Nav className="me-auto">
     <Nav.Link> <Link to='/' className='nav-link'>shopping</Link> </Nav.Link>
-    <Nav.Link><Link to='/features' className='nav-link'>features</Link></Nav.Link>
     <Nav.Link><Link to='/pricing' className='nav-link'>pricing</Link></Nav.Link>
+    <Nav.Link><Link to='/features' className='nav-link'>features</Link></Nav.Link>
   </Nav>
 </Container>
 </Navbar>
